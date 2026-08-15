@@ -92,7 +92,7 @@ function App() {
       {/* Video Background */}
       <div className="video-background">
         <video autoPlay loop muted playsInline>
-          <source src="/background.mp4" type="video/mp4" />
+          <source src="/background.webm" type="video/webm" />
         </video>
       </div>
 
