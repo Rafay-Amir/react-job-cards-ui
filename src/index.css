@@ -18,8 +18,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* -1Everything Come on front */
-  pointer-events: none;
+  z-index: -1; /* Everything Come on front */
   overflow: hidden;
 }
 
@@ -39,17 +38,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  position: relative;
-  z-index: 1;
 }
 
 .card {
   height: 330px;
   width: 280px;
   background-color: rgba(255, 255, 255, 0.1); /* 10% white = transparent */
-  backdrop-filter: blur(5px); /* 5px blur */
-  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  backdrop-filter: blur(5px) !important; /* 5px blur */
+  /* -webkit-backdrop-filter: blur(5px); Safari support */
   border: 2px solid #00000020;
   border-radius: 30px;
   padding: 30px;
