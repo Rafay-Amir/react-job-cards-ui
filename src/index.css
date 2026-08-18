@@ -18,7 +18,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Everything Come on front */
+  z-index: 0; /* -1Everything Come on front */
+  pointer-events: none;
   overflow: hidden;
 }
 
@@ -38,6 +39,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+  z-index: 1;
 }
 
 .card {
