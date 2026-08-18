@@ -2,7 +2,6 @@ import React from 'react'
 import Cards from './components/Cards'
 
 function App() {
-
   const jobOpenings = [
     {
       brandLogo: "https://cdn.vectorstock.com/i/500p/41/67/meta-icon-logo-social-media-technology-company-vector-49864167.jpg",
@@ -84,10 +83,9 @@ function App() {
       pay: "$120/hour",
       location: "Santa Clara, USA"
     },
-  ];
+  ]
 
   return (
-
     <>
       {/* Video Background */}
       <div className="video-background">
@@ -96,15 +94,25 @@ function App() {
         </video>
       </div>
 
-    <div className='parent'>
-      {jobOpenings.map(function(elem, idx){
-        return <div key={idx}>
-          <Cards company={elem.companyName} location={elem.location} pay={elem.pay} tag1={elem.tag1} tag2={elem.tag2} post={elem.post} logo={elem.brandLogo} datePosted={elem.datePosted} ></Cards>
-        </div>
-      })}
-
+      <div className='parent'>
+        {jobOpenings.map(function(elem, idx) {
+          return (
+            <div key={idx}>
+              <Cards
+                company={elem.companyName}
+                location={elem.location}
+                pay={elem.pay}
+                tag1={elem.tag1}
+                tag2={elem.tag2}
+                post={elem.post}
+                logo={elem.brandLogo}
+                datePosted={elem.datePosted}
+              ></Cards>
+            </div>
+          )
+        })}
       </div>
-       </>
+    </>
   )
 }
 
